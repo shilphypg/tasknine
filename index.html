@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hover Image Effect</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Effect</title>
+  <style>
+    .image-container {
+      display: inline-block;
+      position: relative;
+    }
+
+    .image-container img {
+      transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover img {
+      opacity: 0;
+    }
+  </style>
 </head>
 <body>
-    <h2>Hover over the image</h2>
-    <img id="hoverImage" src="https://via.placeholder.com/300" alt="https://i0.wp.com/www.dailycameranews.com/wp-content/uploads/2018/02/canon-eos-m50-sample-images-05.jpeg?ssl=1">
-
-    <script>
-        const img = document.getElementById("hoverImage");
-
-        img.onmouseover = function () {
-            img.style.display = "none"; // Hides the image
-        };
-
-        img.onmouseout = function () {
-            img.style.display = "block"; // Shows the image again
-        };
-    </script>
+  <div class="image-container">
+    <img src="https://i0.wp.com/www.dailycameranews.com/wp-content/uploads/2018/02/canon-eos-m50-sample-images-05.jpeg?ssl=1" alt="Hover Example" width="300">
+  </div>
 </body>
 </html>
+
